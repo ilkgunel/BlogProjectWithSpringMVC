@@ -1,8 +1,13 @@
 package facade;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import org.springframework.transaction.annotation.Transactional;
+
+import entitties.Member;
 
 public abstract class AbstractFacade<T> {
 	private Class<T> entityClass;
@@ -23,5 +28,11 @@ public abstract class AbstractFacade<T> {
 			isOperationSuccessful = false;
 		}
 		return isOperationSuccessful;
+	}
+	
+	@Transactional
+	public List<T> getAllRecords(String namedQuery){
+		Query query = getEntityManager().createNamedQuery(namedQuery);
+		return query.getResultList();
 	}
 }

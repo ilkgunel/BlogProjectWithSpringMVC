@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +23,9 @@ public class MemberService {
 			message = "Üye Kaydı Sırasında Hata Meydana Geldi!";
 		}
 		return message;
+	}
+	
+	public List<Member> getMemberList(){
+		return memberFacade.getAllRecords("Member.findAll");
 	}
 }

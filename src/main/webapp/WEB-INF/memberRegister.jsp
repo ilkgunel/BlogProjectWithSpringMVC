@@ -11,7 +11,7 @@
 <div align="center">
         <h1>Yeni Üye Kaydı</h1>
         <form:form action="postMember" method="post" modelAttribute="member">
-        <table>
+        <table> 
             <form:hidden path="id"/>
             <tr>
                 <td>Adınız:</td>

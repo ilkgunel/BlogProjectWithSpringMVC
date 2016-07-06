@@ -1,4 +1,5 @@
 controllers/HelloWorldController.class
+controllers/MemberListController.class
 facade/AbstractFacade.class
 entitties/Member.class
 controllers/MemberRegisterController.class
