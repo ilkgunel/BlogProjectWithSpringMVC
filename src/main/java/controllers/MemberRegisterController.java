@@ -17,7 +17,7 @@ public class MemberRegisterController {
 	private MemberService memberService;
 	
 	@ModelAttribute("member")
-	 public Member getGreetingObject() {
+	 public Member getArticleObject() {
 	  return new Member(); 
 	 }
 	

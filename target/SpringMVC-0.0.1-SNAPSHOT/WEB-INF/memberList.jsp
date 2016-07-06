@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<table>
+		<table border="1">
 			<tr>
 				<th>Üye No:</th>
 				<th>Adı:</th>
@@ -18,19 +18,31 @@
 				<th>Telefon No:</th>
 				<th>Parola:</th>
 			</tr>
-			<c:foreach var="item" items="${memberList}">
+			<c:forEach var="item" items="${memberList }">
 				<tr>
 					<td>
-						item.id
+						${item.id}
 					</td>
 					<td>
-						item.name
+						${item.name}
 					</td>
 					<td>
-						item.surname
+						${item.surname}
 					</td>
-			</tr>
-			</c:foreach>			
+					<td>
+						${item.address}
+					</td>
+					<td>
+						${item.emailAddress}
+					</td>
+					<td>
+						${item.telephoneNumber}
+					</td>
+					<td>
+						${item.password}
+					</td>
+				</tr>
+			</c:forEach>		
 		</table>
 </body>
 </html>

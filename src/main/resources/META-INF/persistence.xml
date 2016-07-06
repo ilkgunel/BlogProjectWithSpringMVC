@@ -3,5 +3,6 @@
   <persistence-unit name="SpringMVCBlogProject" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entitties.Member</class>
+    <class>entitties.Article</class>
    </persistence-unit>
 </persistence>

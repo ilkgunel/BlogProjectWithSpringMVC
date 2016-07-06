@@ -41,7 +41,7 @@
 					<td>
 						${item.password}
 					</td>
-			</tr>
+				</tr>
 			</c:forEach>		
 		</table>
 </body>

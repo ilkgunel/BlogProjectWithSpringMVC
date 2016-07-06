@@ -10,6 +10,7 @@
 	<context:component-scan base-package="controllers" />
 	<context:component-scan base-package="service" />
 	<context:component-scan base-package="facade" />
+	<context:component-scan base-package="validator" />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -20,6 +21,10 @@
 		</property>
 	</bean>
 	
+	<mvc:resources mapping="/resources/**" location="/resources/theme1/"  
+	cache-period="31556926"/>
+
+    <mvc:annotation-driven />
 	
 	<tx:annotation-driven />
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" 
@@ -45,4 +50,18 @@
         <property name="username" value="root"/>
         <property name="password" value=""/>
     </bean>
+    
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	    <property name="basename" value="/WEB-INF/localization/messages" />
+	    <property name="defaultEncoding" value="UTF-8" />
+ 	</bean>
+ 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+     	<property name="defaultLocale" value="en_US" />
+ 	</bean>
+ 
+	 <mvc:interceptors>
+	     <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+	     <property name="paramName" value="language" />
+	     </bean>
+	 </mvc:interceptors>
 </beans>
