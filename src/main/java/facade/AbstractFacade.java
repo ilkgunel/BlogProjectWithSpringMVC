@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.RollbackException;
 
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +25,7 @@ public abstract class AbstractFacade<T> {
 		try {
 			getEntityManager().persist(entity);
 			isOperationSuccessful =true;
-		} catch (Exception e) {
+		} catch (RollbackException e) {
 			isOperationSuccessful = false;
 		}
 		return isOperationSuccessful;

@@ -2,11 +2,13 @@ controllers/HelloWorldController.class
 controllers/MemberListController.class
 entitties/Member.class
 validator/ArticleFormValidator.class
+controllers/LoginController.class
 entitties/Article.class
 facade/ArticleFacade.class
 controllers/ArticleController.class
 service/ArticleService.class
 facade/AbstractFacade.class
 controllers/MemberRegisterController.class
+controllers/HelloController.class
 facade/MemberFacade.class
 service/MemberService.class

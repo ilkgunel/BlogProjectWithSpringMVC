@@ -80,7 +80,7 @@
 	 <security:http auto-config="true" use-expressions="true">
         <security:csrf disabled="true"></security:csrf>
         <security:intercept-url pattern="/index.html" access="permitAll" />
-        <security:intercept-url pattern="/articleAdd.html" access="hasAnyRole('ROLE_ADMIN', 'ROLE_GUEST')" />
+        <security:intercept-url pattern="/articleAdd.html" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')" />
 
         <!-- Spring Security 4 ile birlikte username ve passwordü parametre olarak geçirmek gerekiyor. -->
         <security:form-login username-parameter="j_username" password-parameter="j_password" login-processing-url="/j_spring_security_check" login-page="/login.html"

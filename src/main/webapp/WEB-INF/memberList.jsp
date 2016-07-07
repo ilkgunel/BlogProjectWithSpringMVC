@@ -11,19 +11,16 @@
 <body>
 		<table border="1">
 			<tr>
-				<th>Üye No:</th>
 				<th>Adı:</th>
 				<th>Soyadı</th>
 				<th>Adres:</th>
 				<th>Email Adres:</th>
 				<th>Telefon No:</th>
 				<th>Parola:</th>
+				<th>Rol:</th>
 			</tr>
 			<c:forEach var="item" items="${memberList }">
 				<tr>
-					<td>
-						${item.id}
-					</td>
 					<td>
 						${item.name}
 					</td>
@@ -41,6 +38,9 @@
 					</td>
 					<td>
 						${item.password}
+					</td>
+					<td>
+						${item.role}
 					</td>
 				</tr>
 			</c:forEach>

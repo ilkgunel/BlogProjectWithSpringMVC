@@ -15,15 +15,15 @@ public class Member implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int id;
+	private String emailAddress;
 
 	private String address;
-
-	private String emailAddress;
 
 	private String name;
 
 	private String password;
+
+	private String role;
 
 	private String surname;
 
@@ -32,12 +32,12 @@ public class Member implements Serializable {
 	public Member() {
 	}
 
-	public int getId() {
-		return this.id;
+	public String getEmailAddress() {
+		return this.emailAddress;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 	public String getAddress() {
@@ -46,14 +46,6 @@ public class Member implements Serializable {
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	public String getEmailAddress() {
-		return this.emailAddress;
-	}
-
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
 	}
 
 	public String getName() {
@@ -70,6 +62,14 @@ public class Member implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getRole() {
+		return this.role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public String getSurname() {

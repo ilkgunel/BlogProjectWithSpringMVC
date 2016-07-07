@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Login Page</title>
+<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 </head>
 <body>
     <h3>Login with Username and Password</h3>
@@ -22,17 +23,19 @@
             </tr>
             <tr>
             	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            </tr>
-            <tr>
-            	<td>
-            		<c:if test="${not empty param.login_error}">
-					    <div class="error">
-					        Your login attempt was not successful, try again.<br />
-					        Reason: #{sessionScope.SPRING_SECURITY_LAST_EXCEPTION.message}
-					    </div>
-					</c:if>
-				</td>
             </tr>            
+        </table>
+        <table>
+        	<tr>
+            	<td>
+            	<c:if test="${not empty sessionScope.SPRING_SECURITY_LAST_EXCEPTION}">
+					<div class="text-danger">
+					    Your login attempt was not successful, try again.<br />
+					    Reason: ${sessionScope['SPRING_SECURITY_LAST_EXCEPTION'].message}"
+					</div>
+				</c:if>
+				</td>
+            </tr>
         </table>
     </form>
 </body>
