@@ -28,7 +28,7 @@ public class MemberService {
 			byte[] messageDigestArray = messageDigest.digest();
 			StringBuffer encodedPassword = new StringBuffer();
 			for (int i = 0; i < messageDigestArray.length; i++) {
-				encodedPassword.append(Integer.toString(messageDigestArray[i]&0xff)+0x100).substring(1);
+				encodedPassword.append(Integer.toString((messageDigestArray[i]&0xff)+0x100,16).substring(1));
 			}
 			member.setPassword(encodedPassword.toString());
 			
@@ -39,11 +39,7 @@ public class MemberService {
 		
 		boolean operationResult = false;
 		member.setRole("ROLE_USER");
-		
-		System.out.println("\n\n\n---");
-		System.out.println(member.getName());
-		System.out.println(member.getSurname());
-		System.out.println("---\n\n\n");
+		member.setEnabled(true);
 		
 		try {
 			 operationResult = memberFacade.create(member);

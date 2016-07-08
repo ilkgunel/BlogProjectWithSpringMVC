@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/localization/messages_tr.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/login.jsp=UTF-8

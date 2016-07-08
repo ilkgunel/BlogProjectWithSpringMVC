@@ -97,7 +97,7 @@
 	 	<security:authentication-provider>
 	 		<security:password-encoder hash="md5"/>
 	 			<security:jdbc-user-service data-source-ref="dataSource"
-	 										users-by-username-query="select emailAddress,password from members where identitynumber=?"
+	 										users-by-username-query="select emailAddress,password,enabled from members where emailAddress=?"
                                         	authorities-by-username-query="select u.emailAddress, r.role from members u, userroles r
                                         	where u.emailAddress = r.emailAddress and u.emailAddress =?"/> 
 	 	</security:authentication-provider>
