@@ -21,7 +21,7 @@
 <body>
 <div align="center">
         <h1>Yeni Üye Kaydı</h1>
-        <form:form action="memberRegister" method="post" modelAttribute="member" commandName="member">
+        <form:form action="memberRegister.html" method="post" modelAttribute="member" commandName="member">
         <table> 
             <tr>
                 <td>Adınız:</td>
@@ -51,7 +51,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Telefon Numaranız:(0212-212-11-22 Şablonuna Göre Giriniz)</td>
+                <td>Telefon Numaranız:</td>
                 <td><form:input id="telephoneNumber" path="telephoneNumber" /></td>
             </tr>
             <tr>

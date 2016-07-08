@@ -45,7 +45,7 @@ public class MemberRegisterController {
 			modelAndView = new ModelAndView("memberRegister");
 			return modelAndView;
 		}		
-		modelAndView = new ModelAndView("redirect:/postMember");
+		modelAndView = new ModelAndView("redirect:/postMember.html");
 		
 		try {
 			insertMessage = memberService.insertNewUser(member);

@@ -7,8 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="memberList.html">Üye Listesi İçin Tıklayın</a>
-<br>
-<a href="articleList.html">Makale Listesi İçin Tıklayın</a>
+<table>
+	<tr>
+		<td><a href="memberRegister.html">Üye Olmak İçin Tıklayın</a></td>
+	</tr>
+	<tr>
+		<td><a href="memberList.html">Üye Listesi İçin Tıklayın</a></td>
+	</tr>
+	<tr>
+		<td><a href="articleAdd.html">Makale Eklemek İçin Tıklayın</a></td>
+	</tr>
+	<tr>
+		<td><a href="articleList.html">Makale Listesi İçin Tıklayın</a></td>
+	</tr>
+</table>
 </body>
 </html>

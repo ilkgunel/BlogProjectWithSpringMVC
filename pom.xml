@@ -83,6 +83,7 @@
   <properties>
         <spring.version>4.0.2.RELEASE</spring.version>
         <security.version>4.0.2.RELEASE</security.version>
-        <jstl.version>1.2</jstl.version>
+        <jstl.version>1.2</jstl.version>       
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>
 </project>

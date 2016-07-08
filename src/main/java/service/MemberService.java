@@ -40,6 +40,11 @@ public class MemberService {
 		boolean operationResult = false;
 		member.setRole("ROLE_USER");
 		
+		System.out.println("\n\n\n---");
+		System.out.println(member.getName());
+		System.out.println(member.getSurname());
+		System.out.println("---\n\n\n");
+		
 		try {
 			 operationResult = memberFacade.create(member);
 		} catch (DatabaseException e) {
