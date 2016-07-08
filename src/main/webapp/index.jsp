@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="memberList">Üye Listesi İçin Tıklayın</a>
+<a href="memberList.html">Üye Listesi İçin Tıklayın</a>
 <br>
-<a href="articleList">Makale Listesi İçin Tıklayın</a>
+<a href="articleList.html">Makale Listesi İçin Tıklayın</a>
 </body>
 </html>

@@ -44,6 +44,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>mvc-dispatcher</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.html</url-pattern>
   </servlet-mapping>
 </web-app>

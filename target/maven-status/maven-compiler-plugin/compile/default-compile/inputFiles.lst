@@ -4,6 +4,7 @@
 /Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/entitties/Article.java
 /Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/entitties/Member.java
 /Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/controllers/HelloWorldController.java
+/Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/controllers/PostMemberController.java
 /Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/service/MemberService.java
 /Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/facade/AbstractFacade.java
 /Users/ilkaygunel/Documents/workspace/BlogProjectWithSpringMVC/src/main/java/facade/ArticleFacade.java
