@@ -1,5 +1,6 @@
 controllers/HelloWorldController.class
 controllers/MemberListController.class
+controllers/PostMemberController.class
 entitties/Member.class
 validator/ArticleFormValidator.class
 controllers/LoginController.class
