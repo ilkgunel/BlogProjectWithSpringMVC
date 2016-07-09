@@ -1,8 +1,12 @@
 package entitties;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import java.util.Date;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -18,6 +22,7 @@ public class Member implements Serializable {
 
 	@Id
 	@NotEmpty
+	@Email
 	private String emailAddress;
 
 	@NotEmpty
@@ -38,6 +43,10 @@ public class Member implements Serializable {
 
 	@NotEmpty
 	private String telephoneNumber;
+	
+	@NotNull
+	@Temporal(TemporalType.DATE)
+	private Date birthDate;
 
 	public Member() {
 	}
@@ -104,6 +113,14 @@ public class Member implements Serializable {
 
 	public void setTelephoneNumber(String telephoneNumber) {
 		this.telephoneNumber = telephoneNumber;
+	}
+	
+	public Date getBirthDate() {
+		return birthDate;
+	}
+	
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
 	}
 
 }

@@ -68,6 +68,10 @@ public class MemberRegisterController {
 			model.addObject("errCode","Aynı E-posta hesabı ikinci kez kayıt olamaz!");
 			model.addObject("errMsg", "this is Exception.class");
 		}
+		else {
+			model.addObject("errCode",ex.getMessage());
+			model.addObject("errMsg", ex.getMessage());
+		}
 		
 		return model;
 

@@ -18,6 +18,11 @@
     	  $("#telephoneNumber").mask('0000-000-00-00');
     });
     </script>
+    <script type="text/javascript" language="javascript">
+    	$(document).ready(function(){
+    		$("#birthDate").mask('00/00/0000');
+    	});
+    </script>
 </head>
 <body>
 
@@ -73,6 +78,11 @@
                 <td>Email Adresiniz:</td>
                 <td><form:input path="emailAddress" /></td>               
                 <td><form:errors path="emailAddress" cssClass="text-danger"></form:errors> </td>
+            </tr>
+            <tr>
+            	<td>Doğum Tarihiniz:</td>
+            	<td> <form:input id="birthDate" path="birthDate"/></td>
+            	<td> <form:errors path="birthDate" cssClass="text-danger"></form:errors> </td>
             </tr>
             <tr>
                 <td>Adresiniz:</td>

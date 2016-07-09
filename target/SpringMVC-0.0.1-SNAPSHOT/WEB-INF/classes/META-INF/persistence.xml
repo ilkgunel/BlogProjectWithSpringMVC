@@ -4,5 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entitties.Article</class>
     <class>entitties.Member</class>
+    <properties>
+    	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+    </properties>
    </persistence-unit>
 </persistence>

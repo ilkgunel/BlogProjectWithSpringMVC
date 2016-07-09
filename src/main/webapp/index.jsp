@@ -38,7 +38,7 @@
       <li><a href="memberList.html">Üye Listesi İçin Tıklayın</a></li>
       <li><a href="articleAdd.html">Makale Eklemek İçin Tıklayın</a></li>
       <li><a href="articleList.html">Makale Listesi İçin Tıklayın</a></li>
-      <li><a href="about.html">Hakkımda</a></li>
+      <li><a href="about.jsp">Hakkımda</a></li>
     </ul>
   </div>
   <div class="clear">&nbsp;</div>
