@@ -22,6 +22,9 @@ public class ArticleController {
 	@Autowired
 	private ArticleFormValidator articleFormValidator;
 	
+	@Autowired
+	private PostArticleController postArticleController;
+	
 	@ModelAttribute("article")
 	public Article getArticleObject(){
 		return new Article();
@@ -38,8 +41,8 @@ public class ArticleController {
 		return "articleAdd";
 	}
 	
-	@RequestMapping(value="/postArticle",method=RequestMethod.POST)
-	public String postArticle(@ModelAttribute("article") Article article,BindingResult result,ModelMap modelMap){
+	@RequestMapping(value="/articleAdd",method=RequestMethod.POST)
+	public String postArticle(@ModelAttribute("article") Article article,BindingResult result){
 		articleFormValidator.validate(article, result);
 		
 		if (result.hasErrors()) {
@@ -47,19 +50,19 @@ public class ArticleController {
 		}
 		
 		String insertMessage = articleService.addArticle(article);
-		modelMap.addAttribute("message",insertMessage);
-		return "postArticle";
+		postArticleController.setPostArticleMessage(insertMessage);
+		return "redirect:/postArticle.html";
 	}
 	
-	@ExceptionHandler(Exception.class)
-	public ModelAndView handleAllException(Exception ex) {
-		ModelAndView model = new ModelAndView("error/generic_error");
-		if(ex.toString().contains("MySQLIntegrityConstraintViolationException: Duplicate entry")){
-			model.addObject("errCode","Aynı E-posta hesabı ikinci kez kayıt olamaz!");
-			model.addObject("errMsg", "this is Exception.class");
-		}
-		
-		return model;
-
-	}
+//	@ExceptionHandler(Exception.class)
+//	public ModelAndView handleAllException(Exception ex) {
+//		ModelAndView model = new ModelAndView("error/generic_error");
+//		if(ex.toString().contains("MySQLIntegrityConstraintViolationException: Duplicate entry")){
+//			model.addObject("errCode","Aynı E-posta hesabı ikinci kez kayıt olamaz!");
+//			model.addObject("errMsg", "this is Exception.class");
+//		}
+//		
+//		return model;
+//
+//	}
 }

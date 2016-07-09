@@ -3,6 +3,8 @@ package entitties;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 
 /**
  * The persistent class for the members database table.
@@ -15,20 +17,26 @@ public class Member implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@NotEmpty
 	private String emailAddress;
 
+	@NotEmpty
 	private String address;
 
 	private boolean enabled;
 
+	@NotEmpty
 	private String name;
 
+	@NotEmpty
 	private String password;
 
 	private String role;
 
+	@NotEmpty
 	private String surname;
 
+	@NotEmpty
 	private String telephoneNumber;
 
 	public Member() {

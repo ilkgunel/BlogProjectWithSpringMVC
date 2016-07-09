@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import entitties.Article;
@@ -21,6 +23,10 @@ public class ArticleService {
 	
 	public String addArticle(Article article){
 		String message="";
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String authorEmailAdress = authentication.getName();
+		article.setAuthorName(authorEmailAdress);
+		
 		boolean creationResult = articleFacade.create(article);
 		if(creationResult){
 			message = "Makale Başarı İle Eklendi!";
