@@ -8,5 +8,6 @@
 </head>
 <body>
 <h2>Mesaj : ${message}</h2>
+<h2> <a href="index.jsp"> Ana Sayfaya Dönün</a> </h2>
 </body>
 </html>
