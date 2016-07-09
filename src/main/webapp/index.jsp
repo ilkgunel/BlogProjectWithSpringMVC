@@ -12,9 +12,25 @@
 <body>
 <div id="container">
   <div id="banner">
-    <h1>Your Site Name</h1>
-    <p class="slogan">slogan here maybe ...</p>
-  </div>
+	    <table align="right">
+				<tr>
+					<td>
+						<c:if test="${pageContext.request.userPrincipal.name != null}">
+									<p>Merhaba ${pageContext.request.userPrincipal.name}</p>
+				 						    <br>
+				  
+				 					<c:url var="logoutAction" value="/j_spring_security_logout"></c:url>
+				  
+				 					<form action="${logoutAction}" method="post">
+				     					<input type="submit" value="Çıkış İçin Tıklayın" />
+				 					</form>
+				 				</c:if>
+					</td>
+				</tr>
+			</table>
+			<h1>Spring MVC İle Basit Blog Projesi</h1>
+	    	<p class="slogan">Basit Bir Proje</p>
+	  </div>
   <div id="navbar">
     <ul>
       <li><a href="index.jsp">Ana Sayfa</a></li>
@@ -46,17 +62,30 @@
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec non ante. Phasellus lacinia eleifend purus. Nulla non leo in ante ornare iaculis. Donec aliquam euismod arcu.</p>
   </div>
   <div id="content">
-    <h3>Main Content</h3>
-    <blockquote>The page has been tested in Mozilla and IE7. This page validates as XHTML 1.0 Transitional using valid CSS. Top image from www.sxc.hu. For more FREE templates visit my website.</blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec non ante. Phasellus lacinia eleifend purus. Nulla non leo in ante ornare iaculis. Donec aliquam euismod arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam blandit dapibus purus. Quisque consequat nibh luctus ligula. Aliquam lobortis venenatis nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Duis pretium euismod elit. Nam velit. Nulla diam massa, interdum non, hendrerit at, blandit nec, turpis. Integer consequat. Vestibulum sem neque, laoreet non, facilisis pretium, ultrices non, mauris. Nunc ante lorem, venenatis sed, vulputate molestie, aliquam eget, enim. Aliquam vulputate porta felis. Nunc sagittis magna in mauris. Pellentesque pellentesque. </p>
-    <p>Proin id dolor. Integer iaculis neque sed arcu congue imperdiet. Etiam nulla est, mattis quis, feugiat vel, venenatis vel, lorem. Aenean pulvinar lectus quis metus. Aenean velit. Proin lacinia, tortor quis congue pharetra, magna ligula congue turpis, eget porta nulla leo nec urna. Morbi ipsum.</p>
-    <p class="post"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments (7)</a> <span class="date">Feb 23, 2007</span> </p>
-    <h3>Recent Articles</h3>
-    <p>Morbi ullamcorper porta ante. Nam sit amet nibh id mi semper varius. Etiam tincidunt, arcu elementum dapibus posuere, justo leo tincidunt justo, vitae gravida pede augue non enim. Pellentesque faucibus magna euismod orci. Proin id dolor. Integer iaculis neque sed arcu congue imperdiet. Etiam nulla est, mattis quis, feugiat vel, venenatis vel, lorem. Aenean pulvinar lectus quis metus. Aenean velit. Proin lacinia, tortor quis congue pharetra, magna ligula congue turpis, eget porta nulla leo nec urna. Morbi ipsum.</p>
-    <p class="post"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments (7)</a> <span class="date">Feb 23, 2007</span> </p>
+    <h3>Bu Proje Hakkında</h3>
+    <blockquote>Bu basit proje benim Spring MVC öğrenmek amacı ile sıfır Spring MVC bilgisi ile giriştiğim bir projedir.</blockquote>
+    <p>Daha önce MVC framework'ü olarak JSF ve JSF ile nesne yönetimi için bir tanesinde Spring, bir tanesinde de EJB kullandığım iki
+   	   adet basit blog projesi yapmıştım.O projelerin kaynak kodları da github hesabımda yer almaktadır. 
+   	   Spring MVC öğrenmeye niyetli olduğum için bir projeye girişerek Spring MVC bilgisi edinmek istedim ve bu projeyi yazdım.
+   	   Bu projeyi kodlarken şu frameworkleri kullandım:</p>
+    <ul>
+    	<li>JSP</li>
+    	<li>Spring MVC</li>
+    	<li>Spring Security</li>
+    	<li>Spring Data (JPA İçin)</li>
+    	<li>JPA (Sağlayıcı Olarak Eclipselink)</li>
+    	<li>MySQL</li>
+    </ul>
+    <p>Ayrıca projeyi hazırlarken Bootstrap CSS'den faydalandım ve  <a href="http://www.free-css.com/free-css-templates/page13/lime-green">http://www.free-css.com/free-css-templates/page13/lime-green</a>
+    	adresindeki ücretsiz CSS şablonunu kullandım. JSP içindeki masklama işlemi için <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/">https://igorescobar.github.io/jQuery-Mask-Plugin/</a>
+    	adresindeki kütüphaneden faydalandım.
+    </p>   
+    <p>Bu projenin kaynak kodları faydalanmak isteyen herkese açıktır. <a href="https://github.com/ilkgunel/BlogProjectWithSpringMVC">https://github.com/ilkgunel/BlogProjectWithSpringMVC</a> adresinden edinebilirsiniz.</p>
+    <p>Benim hakkımda bilgi edinmek ya da benimle iletişime geçmek isterseniz <a href="about.jsp">Hakkımda</a></p> sayfasını kullanabilirsiniz.
+    
   </div>
   <div class="clear">&nbsp;</div>
-  <div id="footer"> <a href="#">Homepage</a> | <a href="#">contact</a> | <a href="http://validator.w3.org/check?uri=referer">html</a> | <a href="http://jigsaw.w3.org/css-validator">css</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | This work is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> </div>
+  <div id="footer"> <a href="index.jsp">Ana Sayfa</a> | <a href="about.jsp">İletişime Geç</a> | <a href="http://validator.w3.org/check?uri=referer">html</a> | <a href="http://jigsaw.w3.org/css-validator">css</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | This work is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> </div>
 </div>
 </body>
 </html>

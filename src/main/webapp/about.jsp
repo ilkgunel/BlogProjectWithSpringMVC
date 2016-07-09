@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -64,39 +62,42 @@
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec non ante. Phasellus lacinia eleifend purus. Nulla non leo in ante ornare iaculis. Donec aliquam euismod arcu.</p>
   </div>
   <div id="content">
-    <center><h4>Makale Bilgilerinizi Doldurunuz</h4></center>
-	<form:form action="articleAdd.html" modelAttribute="article" method="POST">
-		<table>
-			<form:hidden path="articleId"/>
-			<tr>
-				<td>Makale Başlığı:</td>
-				<td>
-					<form:input cssStyle="width:550px;" id="articleTitle" path="articleTitle"/> 
-					<form:errors path="articleTitle" cssClass="text-danger"/> 
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Makale İçeriği</td>
-				<td>
-					<form:textarea path="articleContent" rows="5" cols="105"/>
-					<form:errors path="articleContent" cssClass="text-danger"/> 
-				</td>
-			</tr>
-			<tr>
-				<td> <p></p> </td>
-			</tr>
-			<tr>
-				<td> <p></p> </td>
-			</tr>
-			<tr>
-                <td colspan="2" align="center"><input type="submit" value="Kaydet"></td>
-            </tr>
-		</table>
-	</form:form>
-  </div>
+    <h3>Hakkımda - İlkay Günel</h3>
+    <p>Merhabalar.</p>
+	<p>Ben İlkay Günel. 2016 Haziran ayı itibari  İstanbul Üniversitesi Mühendislik Fakültesi Bilgisayar Mühendisliği bölümünden mezun oldum.</p>
+
+	<p>Bir karadeniz uşağuyum. 🙂 Samsun,Bafra’lıyım. 1993 yılında doğdum (doğmuşum).</p>
+
+	<p> Şu anda Java teknolojileri üzerine kendini geliştirmeye çalışan ve Java EE üzerine kariyer hedefi olan bir kişiyim. Java’yı çok sevmeme rağmen kahve ile hiç arası olmayan, Karadeniz’li olmama rağmen çayı nadiren canı çeken bir insanım. kod5.org ve ilkgunel.github.io adresleri altında da kendimi geliştirme amaçlı öğrendiğim teknolojileri sizlerle elimden geldiğince paylaşmaya çalışıyorum. Burası hem benim unuttuğum şeyleri kolayca hatırlamada hem de sizlerin yeni şeyler öğrenmenizde harika bir nokta. Şimdiye kadar öğrendiğim ve öğrenmeye çalıştığım teknolojiler şunlardır:</p>
+
+	<ul>
+		<li>Java SE</li>
+		<li>Servlets</li>
+		<li>JSP</li>
+		<li>JSF (JSF Giriş Yazımda Yazılarımın Sıralı Listesi Bulunmaktadır:JSF Dersleri – JSF Nedir? Giriş,IDE Kurulumu Ve İlk Uygulama</li>
+		<li>PrimeFaces (PrimeFaces Giriş Yazımda Yazılarımın Sıralı Listesi Bulunmaktadır:JSF&PrimeFaces Dersleri-PrimeFaces’a Giriş</li>
+		<li>Spring Dependecy Injection</li>
+		<li>Spring MVC</li>
+		<li>Spring Security</li>
+		<li>JPA</li>
+		<li>Restful Web Service (RestEasy Üzerinde Çalışıyorum)</li>
+		<li>EJB</li>
+	</ul>
+	<h4>Benimle İletişime Geçin</h4>
+	<p>Eğer bana ulaşmak, yazdığım bir takım projelerin kodlarına bakmak isterseniz aşağıdaki adreslerden bana ulaşabilirsiniz.
+	Bana ait bir özgeçmiş de Linkedin profilimde yer almaktadır.</p>
+
+	<ul>
+		<li>ilkay.gunel@kod5.org</li>
+		<li>ilkgunel93@gmail.com</li>
+		<li>github.com/ilkgunel</li>
+		<li>twitter.com/ilkgunel</li>
+		<li>facebook.com/ilkay.gnll</li>
+		<li>tr.linkedin.com/in/ilkaygunel</li>
+		<li>youtube.com/c/ilkaygünel</li>
+		<li>plus.google.com/+ilkaygünel</li>
+    </ul>	
+    </div>
   <div class="clear">&nbsp;</div>
   <div id="footer"> <a href="index.jsp">Ana Sayfa</a> | <a href="about.jsp">İletişime Geç</a> | <a href="http://validator.w3.org/check?uri=referer">html</a> | <a href="http://jigsaw.w3.org/css-validator">css</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | This work is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> </div>
 </div>
