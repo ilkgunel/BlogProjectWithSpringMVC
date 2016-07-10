@@ -19,10 +19,14 @@
                             http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">                         
 
 	<context:component-scan base-package="controllers" />
+	<context:component-scan base-package="entities" />
 	<context:component-scan base-package="service" />
 	<context:component-scan base-package="facade" />
 	<context:component-scan base-package="validator" />
 	<context:component-scan base-package="security" />
+	
+	<bean id="autowireHelper" class="helper.AutowireHelper" factory-method="getInstance"/>
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">

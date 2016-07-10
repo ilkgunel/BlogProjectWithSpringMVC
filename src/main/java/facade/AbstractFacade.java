@@ -8,7 +8,7 @@ import javax.persistence.RollbackException;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import entitties.Member;
+import entities.Member;
 
 public abstract class AbstractFacade<T> {
 	private Class<T> entityClass;

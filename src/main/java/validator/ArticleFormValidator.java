@@ -5,7 +5,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import entitties.Article;
+import entities.Article;
 
 @Component
 public class ArticleFormValidator implements Validator{

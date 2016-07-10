@@ -5,7 +5,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Component;
 
-import entitties.Article;
+import entities.Article;
 
 @Component
 public class ArticleFacade extends AbstractFacade<Article>{

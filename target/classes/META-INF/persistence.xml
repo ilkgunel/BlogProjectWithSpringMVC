@@ -2,9 +2,9 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="SpringMVCBlogProject" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>entitties.Article</class>
-    <class>entitties.Member</class>
-    <class>entitties.EntityTest</class>
+    <class>entities.Article</class>
+    <class>entities.Member</class>
+    <class>entities.Userrole</class>
     <properties>
 	    <property name="javax.persistence.schema-generation.database.action"
                   value="create"/>

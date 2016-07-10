@@ -9,14 +9,19 @@ import org.eclipse.persistence.exceptions.DatabaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entitties.Member;
+import entities.Member;
+import entities.Userrole;
 import facade.MemberFacade;
+import facade.UserRoleFacade;
 
 @Service
 public class MemberService {
 	@Autowired
 	private MemberFacade memberFacade;
 	
+	@Autowired 
+	private UserRoleFacade userRoleFacade;
+		
 	String errorMessage = "";
 	
 	public String insertNewUser(Member member) {
@@ -37,12 +42,18 @@ public class MemberService {
 			System.out.println("Hata:"+e);
 		}
 		
-		boolean operationResult = false;
+		boolean memberOperationResult = false;
+		boolean userRoleOperationResult= false;
+		
 		member.setRole("ROLE_USER");
 		member.setEnabled(true);
 		
 		try {
-			 operationResult = memberFacade.create(member);
+			memberOperationResult = memberFacade.create(member);
+			 Userrole userrole = new Userrole();
+			 userrole.setRole(member.getRole());
+			 userrole.setEmailAddress(member.getEmailAddress());
+			 userRoleOperationResult = userRoleFacade.create(userrole);
 		} catch (DatabaseException e) {
 			System.out.println("An error occured while inserting new user!");
 			System.out.println("Error is:"+e);
@@ -51,7 +62,7 @@ public class MemberService {
 			}
 			System.out.println("\n\nHata mesajı burada:"+errorMessage+"\n\n");
 		}
-		if (operationResult) {
+		if (memberOperationResult && userRoleOperationResult) {
 			message = "Üye Kaydı Başarı İle Yapıldı!";
 		}
 		else {
