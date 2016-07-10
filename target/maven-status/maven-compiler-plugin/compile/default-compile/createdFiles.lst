@@ -10,6 +10,9 @@ controllers/ArticleController.class
 service/ArticleService.class
 facade/AbstractFacade.class
 controllers/MemberRegisterController.class
+controllers/ArticleViewController.class
 controllers/HelloController.class
 facade/MemberFacade.class
 service/MemberService.class
+entitties/EntityTest.class
+controllers/PostArticleController.class

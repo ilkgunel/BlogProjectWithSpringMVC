@@ -4,8 +4,10 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entitties.Article</class>
     <class>entitties.Member</class>
+    <class>entitties.EntityTest</class>
     <properties>
-    	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+	    <property name="javax.persistence.schema-generation.database.action"
+                  value="create"/>
     </properties>
    </persistence-unit>
 </persistence>
