@@ -11,7 +11,9 @@
 </head>
 <body>
 <div id="container">
-  <jsp:include file="banner.jsp"></jsp:include>
+	<div id="banner">
+		<jsp:include page="banner.jsp"></jsp:include>
+	</div>
   <div id="navbar">
     <ul>
       <li><a href="index.jsp">Ana Sayfa</a></li>

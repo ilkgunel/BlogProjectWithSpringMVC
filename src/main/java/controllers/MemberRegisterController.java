@@ -31,7 +31,7 @@ public class MemberRegisterController {
 	
 	@RequestMapping(value="/memberRegister", method = RequestMethod.GET)
     public String addMember( ) {
-        return "/memberRegister";
+        return "memberRegister";
     }
 	
 	@RequestMapping(value = "/memberRegister",method = RequestMethod.POST)
